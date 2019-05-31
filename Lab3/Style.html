@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="main.css">
+    <title>Style</title>
+</head>
+<body>
+<form>
+    <div class="inputRow">
+        <label class="myLabel">Your name
+            <input class="myInput" type="text" name="name" placeholder="Your name" required
+                   pattern="[A-Za-z]{2,}$"
+                   title="Must contain  2 or more letters (upper case or lower case). No other characters
+                   permitted"></label>
+    </div>
+    <div class="inputRow">
+        <label class="myLabel">Email
+            <input class="myInput" type="text" name="email" placeholder="Email" required
+                   pattern="[A-Za-z]+@[A-Za-z]+\.[A-Za-z]{2,3}$"
+                   title="Must contain 1 or more letters, followed by @, followed by 1 or more letters, followed by a
+                   single period, then 2 or 3 letters"></label>
+    </div>
+    <div class="inputRow">
+        <label class="myLabel">Username
+            <input class="myInput" type="text" name="username" placeholder="Username" required
+                   pattern="[A-Za-z]+[0-9]*$"
+                   title="Must contain one or more letters, followed by 0 or more numbers"></label>
+    </div>
+    <div class="inputRow">
+        <label class="myLabel">Province
+            <select class="myInput">
+                <option value="AB">AB</option>
+                <option value="BC" selected>BC</option>
+                <option value="MB">MB</option>
+                <option value="NB">NB</option>
+                <option value="NL">NL</option>
+                <option value="NT">NT</option>
+                <option value="NS">NS</option>
+                <option value="NU">NU</option>
+                <option value="ON">ON</option>
+                <option value="PE">PE</option>
+                <option value="QC">QC</option>
+                <option value="SK">SK</option>
+                <option value="YT">YT</option>
+            </select></label>
+    </div>
+    <div class="inputRow">
+        <label class="myLabel">Postal Code
+            <input class="myInput" type="text" name="postalCode" placeholder="Postal Code" required
+                   pattern="[A-Za-z][0-9][A-Za-z][ ]?[0-9][A-Za-z][0-9]$"
+                   title="Must letter number letter (optional space) number letter number"></label>
+    </div>
+    <div class="inputRow">
+        <input class="myInput" type="submit" name="submit" value="Go!">
+    </div>
+</form>
+</body>
+</html>
