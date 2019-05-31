@@ -6,6 +6,6 @@ deployment:
     - /bin/cp Lab3/Lab3.html $DEPLOYPATH_LAB3
     - /bin/cp Lab3/main.css $DEPLOYPATH_LAB3
     - /bin/cp Lab3/processForm.php $DEPLOYPATH_LAB3
-    - /bin/cp Lab3/Lab4.html $DEPLOYPATH_LAB4
-    - /bin/cp Lab3/myStyles.css $DEPLOYPATH_LAB4
-    - /bin/cp Lab3/error.js $DEPLOYPATH_LAB4
+    - /bin/cp Lab4/Lab4.html $DEPLOYPATH_LAB4
+    - /bin/cp Lab4/myStyles.css $DEPLOYPATH_LAB4
+    - /bin/cp Lab4/error.js $DEPLOYPATH_LAB4
