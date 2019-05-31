@@ -1,7 +1,11 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/user/public_html/lab3
-    - /bin/cp Lab3/Lab3.html $DEPLOYPATH
-    - /bin/cp Lab3/main.css $DEPLOYPATH
-    - /bin/cp Lab3/processForm.php $DEPLOYPATH
+    - export DEPLOYPATH_LAB3=/home/user/public_html/lab3
+    - export DEPLOYPATH_LAB4=/home/user/public_html/lab4
+    - /bin/cp Lab3/Lab3.html $DEPLOYPATH_LAB3
+    - /bin/cp Lab3/main.css $DEPLOYPATH_LAB3
+    - /bin/cp Lab3/processForm.php $DEPLOYPATH_LAB3
+    - /bin/cp Lab3/Lab4.html $DEPLOYPATH_LAB4
+    - /bin/cp Lab3/myStyles.css $DEPLOYPATH_LAB4
+    - /bin/cp Lab3/error.js $DEPLOYPATH_LAB4
