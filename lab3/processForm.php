@@ -30,7 +30,7 @@
 	<?php
 		if(isset($err)){
 			echo "<p>".$err."</p>\n";
-			echo "<a href='Lab3.html'>Back</a>\n";
+			echo "<a href='lab3.html'>Back</a>\n";
 		}
 		else{
 	?>
