@@ -1,4 +1,4 @@
 ---
 deployment:
   tasks:
-    - /bin/cp README.md /home/frankthetank/public_html/
+    - /bin/cp lab4 /home/frankthetank/public_html/
