@@ -2,12 +2,3 @@
 deployment:
   tasks:
     - /bin/cp README.md /home/frankthetank/public_html/
-    - export DEPLOYPATH_LAB3=/home/frankthetank/public_html/lab3/
-    - export DEPLOYPATH_LAB4=/home/frankthetank/public_html/lab4/
-    - export DEPLOYPATH=/home/user/public_html/
-    - /bin/cp lab3.html $DEPLOYPATH_LAB3
-    - /bin/cp main.css $DEPLOYPATH_LAB3
-    - /bin/cp processForm.php $DEPLOYPATH_LAB3
-    - /bin/cp lab4.html $DEPLOYPATH_LAB4
-    - /bin/cp myStyles.css $DEPLOYPATH_LAB4
-    - /bin/cp error.js $DEPLOYPATH_LAB4
