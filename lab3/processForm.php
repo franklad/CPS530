@@ -1,10 +1,10 @@
 <?php
-	$animal1 = "";
-	$animal2 = "";
-	$hp = "";
-	$dex = "";
-	$col = "";
-	$err = "";
+	$animal1;
+	$animal2;
+	$hp;
+	$dex;
+	$col;
+	$err;
 	if(isset($_POST)){
 		$animal1=$_POST['animal1'];
 		$animal2=$_POST['animal2'];
@@ -23,7 +23,7 @@
 <head>
 	<meta charset="utf-8"/>
 	<title>Result</title>
-	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href=".">
 	<!-- other head stuff -->
 </head>
 <body >
