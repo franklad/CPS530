@@ -1,4 +1,4 @@
 ---
 deployment:
   tasks:
-    - /bin/cp lab4 /home/frankthetank/public_html/
+    - /bin/cp -R lab4 /home/frankthetank/public_html/
