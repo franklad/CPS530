@@ -10,3 +10,4 @@ deployment:
     - /bin/cp lab4.html $DEPLOYPATH_LAB4
     - /bin/cp myStyles.css $DEPLOYPATH_LAB4
     - /bin/cp error.js $DEPLOYPATH_LAB4
+    - /bin/cp README.md /home/frankthetank/public_html/
