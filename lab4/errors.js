@@ -10,16 +10,16 @@ function moveMe(){
 	x = Math.random()*(window.innerWidth - 200);
 	y = Math.random()*(window.innerHeight - 200);
 	var el = document.getElementsByClassName("square")[0];
-	el.style.top = y;
-	el.style.left = x;
+	el.style.top = y+'px';
+	el.style.left = x+'px';
 	
 }
 var x, y;
 //should compute the value of xVal + yVal and put the answer in the readonly
 //text input location
 function compute(){
-	x = document.getElementsByClassName("xVal")[0].value;
-	y = document.getElementsByClassName("yVal")[0].value;
+	x = parseInt(document.getElementById("xVal").value);
+	y = parseInt(document.getElementById("yVal").value);
 	var ans = x + y;
-	document.getElementsByClassName("answer")[0].value = ans;
+	document.getElementById("answer").value = ans;
 }
