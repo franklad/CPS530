@@ -17,10 +17,20 @@
 		}
 	}
 ?>
+<!DOCTYPE html>
+<!-- put your comments here-->
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+<head>
+	<meta charset="utf-8"/>
+	<title>Result</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<!-- other head stuff -->
+</head>
+<body >
 	<?php
 		if(isset($err)){
 			echo "<p>".$err."</p>\n";
-			echo "<a href='lab3.html'>Back</a>\n";
+			echo "<a href='./Lab3.html'>Back</a>\n";
 		}
 		else{
 	?>
@@ -31,3 +41,6 @@
 	<?php
 		}
 	?>
+
+</body>
+</html>
