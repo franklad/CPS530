@@ -2,5 +2,7 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/frankthetank/public_html/
+    - /bin/rm -rf $DEPLOYPATH/lab3
+    - /bin/rm -rf $DEPLOYPATH/lab4
     - /bin/cp -R lab3 $DEPLOYPATH
     - /bin/cp -R lab4 $DEPLOYPATH
