@@ -3,7 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="L4.js"></script>
 </head>
-<body>
+<body onload="onLoad()" class="container mt-5">
+    <div>
+        <span id="formula">Formula: </span>
+    </div>
+    <div class="mt-2">
+        <label>Operator:
+            <select id="op">
+                <option value="/">/</option>
+                <option value="*">*</option>
+            </select>
+        </label>
+        <label>Number:
+            <input id="number" type="number">
+        </label>
+    </div>
+    <div class="mt-2">
+        <button id="add">Add</button>
+        <button id="calc">Calculate</button>
+        <button id="clear">Clear</button>
+    </div>
+    <div class="mt-3">
+        <label id="res">Result: </label>
+    </div>
+    <script>
+        let val = 1;
+        let mult = true;
+        number.oninput = () => {
+            if (number.value.length > 0 ) {
+                add.disabled = false;
+            } else {
+                add.disabled = true;
+            }
+        };
+
+        add.onclick = () => {
+            console.log(number.value.length);
+            if (number.value.length > 0
+                && (formula.innerHTML[formula.innerHTML.length-1] == "*"
+                || formula.innerHTML[formula.innerHTML.length-1] == "/"
+                || formula.innerHTML[formula.innerHTML.length-1] == " ")
+            ) {
+                formula.innerHTML += number.value;
+                op.disabled = false;
+                if (mult) {
+                    val *= parseInt(number.value);
+                } else {
+                    val /= parseInt(number.value);
+                }
+                number.value = "";
+                number.disabled = true;
+                calc.disabled = false;
+            } else {
+                mult = op.value == "*";
+                op.value == "*" ? formula.innerHTML += "*" : formula.innerHTML += "/";
+                number.disabled = false;
+                op.disabled = true;
+                calc.disabled = true;
+            }
+        };
+
+        calc.onclick = () => {
+            res.innerHTML = "Result: "+val;
+        };
+
+        clear.onclick = () => {
+            number.value = "";
+            number.disabled = false;
+            op.disabled = true;
+            calc.disabled = true;
+            add.disabled = true;
+            formula.innerHTML = "Formula: ";
+            res.innerHTML = "Result: "
+        }
+    </script>
 </body>
 </html>
