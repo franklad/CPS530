@@ -33,7 +33,9 @@
     <script>
         let val = 1;
         let mult = true;
+        let finite = true;
         number.oninput = () => {
+            res.innerHTML = "Result: ";
             if (number.value.length > 0 ) {
                 add.disabled = false;
             } else {
@@ -50,10 +52,14 @@
             ) {
                 formula.innerHTML += number.value;
                 op.disabled = false;
-                if (mult) {
+                if (mult && finite) {
                     val *= parseInt(number.value);
-                } else {
-                    val /= parseInt(number.value);
+                } else if (finite) {
+                    if (Number.isFinite(val/parseInt(number.value))) val /= parseInt(number.value);
+                    else {
+                        val = "Division by zero!";
+                        finite = false;
+                    }
                 }
                 number.value = "";
                 number.disabled = true;
@@ -64,6 +70,13 @@
                 number.disabled = false;
                 op.disabled = true;
                 calc.disabled = true;
+            }
+            console.log(val);
+            console.log(mult.valueOf());
+            console.log(finite);
+            if (!finite) {
+                calc.onclick()
+                clear.onclick()
             }
         };
 
@@ -78,7 +91,10 @@
             calc.disabled = true;
             add.disabled = true;
             formula.innerHTML = "Formula: ";
-            res.innerHTML = "Result: "
+            finite = false;
+            mult = true;
+            finite = true;
+            val = 1
         }
     </script>
 </body>
